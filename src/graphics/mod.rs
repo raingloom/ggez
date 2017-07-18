@@ -36,8 +36,8 @@ mod types;
 pub use self::text::*;
 pub use self::types::*;
 
-const GL_MAJOR_VERSION: u8 = 3;
-const GL_MINOR_VERSION: u8 = 2;
+const GL_MAJOR_VERSION: u8 = 2;
+const GL_MINOR_VERSION: u8 = 1;
 
 
 
@@ -279,8 +279,8 @@ impl GraphicsContext {
         let encoder: gfx::Encoder<gfx_device_gl::Resources, gfx_device_gl::CommandBuffer> =
             factory.create_command_buffer().into();
 
-        let pso = factory.create_pipeline_simple(include_bytes!("shader/basic_150.glslv"),
-                                    include_bytes!("shader/basic_150.glslf"),
+        let pso = factory.create_pipeline_simple(include_bytes!("shader/basic_120.glslv"),
+                                    include_bytes!("shader/basic_120.glslf"),
                                     pipe::new())?;
 
         let (quad_vertex_buffer, quad_slice) =
